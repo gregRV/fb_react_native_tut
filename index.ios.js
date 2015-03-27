@@ -9,8 +9,9 @@ var {
   AppRegistry,
   StyleSheet,
   Text,
+  ListView,
   View,
-  Image
+  Image,
 } = React;
 
 var MOCKED_MOVIES_DATA = [
@@ -27,7 +28,10 @@ var REQUEST_URL = API_URL + PARAMS;
 var AwesomeProject = React.createClass({
     getInitialState: function(){
         return {
-            movies: null,
+            dataSource: new ListView.DataSource({
+                rowHasChanged: (row1, row2) => row1 !== row2,
+            }),
+            loaded: false,
         };
     },
 
@@ -40,18 +44,27 @@ var AwesomeProject = React.createClass({
             .then((response) => response.json())
             .then((responseData) => {
                 this.setState({
-                    movies: responseData.movies,
+                    dataSource:
+                    this.state.dataSource.cloneWithRows(responseData.movies),
+                    loaded: true,
                 });
             })
             .done();
     },
 
     render: function() {
-    if (!this.state.movies) {
-        return this.renderLoadingView();
-    }
-    var movie = this.state.movies[0];
-    return this.renderMovie(movie);
+        if (!this.state.loaded) {
+            return this.renderLoadingView();
+        }
+        // var movie = this.state.movies[0];
+        // return this.renderMovie(movie);
+        return (
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderMovie}
+                style={styles.listView}
+            />
+        );
     },
 
     renderLoadingView: function() {
@@ -109,9 +122,13 @@ var styles = StyleSheet.create({
      marginBottom: 8,
     textAlign: 'center',
     },
-    year: {
-        textAlign: 'center',
-    }
+  year: {
+    textAlign: 'center',
+  },
+  listView: {
+      paddingTop: 20,
+      backgroundColor: '#F5FCFF',
+  }
  });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
