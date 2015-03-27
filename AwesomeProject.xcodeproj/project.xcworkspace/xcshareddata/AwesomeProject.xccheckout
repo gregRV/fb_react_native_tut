@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E729988B-EACB-4E79-8C23-B51FFE0B6E26</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AwesomeProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F895B710C79F032F051AC682622C88E92C7ECE3B</key>
+		<string>github.com:gregRV/fb_react_native_tut.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AwesomeProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F895B710C79F032F051AC682622C88E92C7ECE3B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:gregRV/fb_react_native_tut.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F895B710C79F032F051AC682622C88E92C7ECE3B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F895B710C79F032F051AC682622C88E92C7ECE3B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AwesomeProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>
